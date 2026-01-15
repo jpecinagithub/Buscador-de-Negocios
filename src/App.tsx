@@ -16,19 +16,28 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner position="bottom-right" theme="dark" />
-      <BrowserRouter>
+      <BrowserRouter basename="/Buscador-de-Negocios">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={
-            <ProtectedRoute>
-              <Index />
-            </ProtectedRoute>
-          } />
-          <Route path="/created-websites" element={
-            <ProtectedRoute>
-              <CreatedWebsites />
-            </ProtectedRoute>
-          } />
+
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Index />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/created-websites"
+            element={
+              <ProtectedRoute>
+                <CreatedWebsites />
+              </ProtectedRoute>
+            }
+          />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
