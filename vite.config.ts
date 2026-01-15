@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Buscador-de-Negocios/", // 👈 MUY IMPORTANTE
+  base: "./", // 👈 MUY IMPORTANTE
 
   server: {
     host: "::",
